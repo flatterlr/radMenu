@@ -1,0 +1,17 @@
+.radialMenu{
+	width: 500px; 
+	top: 500px; 
+	left: 500px;
+}
+
+.menuItem{
+	background-color: red;
+	border: 2px solid black; 
+}
+.menuItem a{
+	font-size: 10px; 
+}
+
+.headItem{
+	background-color: blue; 
+}
