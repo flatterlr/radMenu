@@ -1,18 +1,21 @@
-$(document).ready(function(){
-	
-	makeRadial($('.radialMenu'), 50, 150); 
+/*
+ * jQuery radial menu -- Lucas Flatter, using Jonah Fox's path animation code
+ * version 0.0.1
+ */
+/*
+	$('.radialMenu').makeRadial(50,150); 
+*/
 
-}); 
+(function( $ ){
 
-function makeRadial(listQuery, itemSize, radius){
+$.fn.makeRadial = function(itemSize, radius) {
 	
-	var $radialMenu = listQuery; 
-	var $menuItem = $($radialMenu).find('li'); 
+	var $menuItem = this.find('li'); 
 	
 	var size = itemSize; 
 	var BorderRadius = size/2; 
 	
-	$($radialMenu).css('position','relative'); 
+	this.css('position','relative'); 
 	$($menuItem).css('list-style-type', 'none')
 				.css('display', 'block')
 				  .css('width', ""+size)
@@ -101,4 +104,5 @@ function makeRadial(listQuery, itemSize, radius){
 	}); 
 	i= 0; 
 	
-}
+	};
+})(jQuery); 
