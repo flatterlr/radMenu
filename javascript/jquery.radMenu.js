@@ -8,7 +8,7 @@
 
 (function( $ ){
 
-$.fn.makeRadial = function(itemSize, radius) {
+$.fn.makeRadial = function(itemSize, radius,top,left) {
 	
 	var $menuItem = this.find('li'); 
 	
@@ -16,6 +16,12 @@ $.fn.makeRadial = function(itemSize, radius) {
 	var BorderRadius = size/2; 
 	
 	this.css('position','relative'); 
+	this.css('width',""+size +"px"); 
+	this.css('height',""+size +"px"); 
+	this.css('top',""+top +"px"); 
+	this.css('left',""+left +"px"); 
+	this.css('padding','0px'); 
+	
 	$($menuItem).css('list-style-type', 'none')
 				.css('display', 'block')
 				  .css('width', ""+size)
